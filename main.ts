@@ -1,13 +1,14 @@
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(aceptar)
-    aceptar = 0
 })
 input.onGesture(Gesture.Shake, function () {
-    aceptar += 1
+    if (input.acceleration(Dimension.Strength) > 750) {
+        aceptar += 1
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
-    basic.showNumber(77 * aceptar)
+    basic.showNumber(0.77 * aceptar)
 })
 input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
