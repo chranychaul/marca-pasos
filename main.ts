@@ -1,10 +1,11 @@
+input.onGesture(Gesture.LogoUp, function () {
+    if (input.acceleration(Dimension.Y) > 50) {
+        aceptar += 1
+        basic.pause(200)
+    }
+})
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(aceptar)
-})
-input.onGesture(Gesture.Shake, function () {
-    if (input.acceleration(Dimension.Strength) > 750) {
-        aceptar += 1
-    }
 })
 input.onButtonPressed(Button.AB, function () {
     basic.clearScreen()
